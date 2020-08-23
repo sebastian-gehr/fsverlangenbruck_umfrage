@@ -24,6 +24,7 @@
 <head>
 	<title>FSV Bruck e.V. Umfrage zur Neuausrichtung des Vereins</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="content-script-language" content="text/javascript" />
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<link rel="stylesheet" type="text/css" media="screen" href="./FSV_Bruck.css" />
@@ -63,7 +64,7 @@
 				// Auswahlliste deaktivieren (ausgrauen)
 				document.getElementById('fsv_abteilungen_id').setAttribute('disabled', 'disabled');
 				//
-				// In Auswahlliste mit den FSV-Abteilungen evtl. getätigte Auswahl zurücksetzen
+				// In Auswahlliste mit den FSV-Abteilungen evtl. getï¿½tigte Auswahl zurï¿½cksetzen
 				document.frm_fsv_umfrage.fsv_abteilungen.selectedIndex = -1;
 			}
 			
@@ -145,15 +146,21 @@
 
 	<div class="allg_text">
 		<br />
-		<h2>Nutze die Chance und gestalte mit uns zusammen den Sportverein Deiner W&uuml;nsche!</h2>
-		Der FSV Erlangen-Bruck e.V. steht - wie viele Sportvereine heute - vor einem Umbruch. Im Fokus steht f&uuml;r uns aktuell der Bau eines neuen Sportheims. </br>
-		Dies bietet die Chance, das bestehende Angebot beim FSV deutlich zu erweitern. Wir m&ouml;chten wissen: </br>
-		Was w&uuml;nschen sich die FSV-Mitglieder wie auch die sportlich interessierten Freunde, Nachbarn und Berufst&auml;tigen aus der Umgebung? </br> 
-		Wie sollen der FSV Erlangen-Bruck, sein Sport- und Freizeitangebot und das neue Sportheim aussehen? Das Ergebnis dieser Umfrage wird das k&uuml;nftige  </br>
-		Vereinsleben ma&szlig;geblich mitbestimmen. Nimm Dir deshalb bitte die Zeit zur Beantwortung der Fragen und gestalte die Zukunft des FSV aktiv mit! </br></br>
-		Unter allen Teilnehmenden verlosen wir 8 Gutscheine &agrave; 20 Euro f&uuml;r unsere<a href="https://www.fsverlangenbruck.de/files/verein/licandro_speisekarte_2020_04_12.pdf">Sportgastst&auml;tte.</a><br /><br />
-		Selbstverst&auml;ndlich werden die Anforderungen des Datenschutzes erf&uuml;llt. Die Umfrage wird anonymisiert durchgef&uuml;hrt und ausgewertet. <br /><br /><br />
-		<hr align="left" width="50%" />
+		<div style="float: left;">
+            <h2>Nutze die Chance und gestalte mit uns zusammen den Sportverein Deiner W&uuml;nsche!</h2>
+            Der FSV Erlangen-Bruck e.V. steht - wie viele Sportvereine heute - vor einem Umbruch. Im Fokus steht f&uuml;r uns aktuell der Bau eines neuen Sportheims. </br>
+            Dies bietet die Chance, das bestehende Angebot beim FSV deutlich zu erweitern. Wir m&ouml;chten wissen: </br>
+            Was w&uuml;nschen sich die FSV-Mitglieder wie auch die sportlich interessierten Freunde, Nachbarn und Berufst&auml;tigen aus der Umgebung? </br>
+            Wie sollen der FSV Erlangen-Bruck, sein Sport- und Freizeitangebot und das neue Sportheim aussehen? Das Ergebnis dieser Umfrage wird das k&uuml;nftige  </br>
+            Vereinsleben ma&szlig;geblich mitbestimmen. Nimm Dir deshalb bitte die Zeit zur Beantwortung der Fragen und gestalte die Zukunft des FSV aktiv mit! </br></br>
+            Unter allen Teilnehmenden verlosen wir 8 Gutscheine &agrave; 20 Euro f&uuml;r unsere<a href="https://www.fsverlangenbruck.de/files/verein/licandro_speisekarte_2020_04_12.pdf">Sportgastst&auml;tte.</a><br /><br />
+            Selbstverst&auml;ndlich werden die Anforderungen des Datenschutzes erf&uuml;llt. Die Umfrage wird anonymisiert durchgef&uuml;hrt und ausgewertet. <br /><br /><br />
+
+		</div>
+		<img src="fsv_logo_transparent.png" alt="Logo FSV Erlangen-Bruck" style="width: 180px;" />
+		<div style="clear: both;">
+		    <img src="luftbild.png" style="width: 100%;" alt="Lufbild VereinsgelÃ¤nde" />
+		</div>
 	<?php
 		//
 		//
@@ -170,8 +177,8 @@
 		if (				( isset ( $_POST ) )
 				&&   ( ! ( isset ( $_POST['fragebogen_abschicken'] ) ) ) )  {
 			//
-			// komme von der Hauptseite her (Anstoß der Umfrage)
-			// Aufblenden des Formulars für die Abfrage bzw. Return
+			// komme von der Hauptseite her (Anstoï¿½ der Umfrage)
+			// Aufblenden des Formulars fï¿½r die Abfrage bzw. Return
 
 // 																								echo "<br />" . __LINE__  . "<br />";
 // 																								var_dump($_POST);
@@ -228,7 +235,7 @@
 							Austrittsgrund:&nbsp; 
 						</div>
 						<div class="spalte2">
-							<input name="austrittsgrund" id = "austrittsgrund_id" type="text" size="140" maxlength="140" value = "" /><br /><br />
+							<input name="austrittsgrund" id = "austrittsgrund_id" type="text" size="120" maxlength="140" value = "" /><br /><br />
 						</div>
 					</div>
 					<div class="table">
@@ -732,7 +739,7 @@
  						</div>
  					</div>
  					<br /><br />
- 					<hr align="left" width="50%" />
+ 					<hr align="left" width="100%" />
 					<br />
 					<h4>Gesundheit &amp; Wellness</h4>
 					<div class="table">
@@ -874,7 +881,7 @@
 						</div>
 					</div>
 					<br /><br />
-					<hr align="left" width="50%" /><br />
+					<hr align="left" width="100%" /><br />
 					<h4>Angebote direkt am Vereinsgel&auml;nde</h4>
 					<div class="table">
 						<div class="spalte3">
@@ -1001,7 +1008,7 @@
 						</div>
 					</div>
 					<br /><br />
-					<hr align="left" width="50%" />
+					<hr align="left" width="100%" />
 					<br />
 					<h4>Individualsportarten</h4>
 					<div class="table">
@@ -1125,7 +1132,7 @@
 						</div>
 					</div>
 					<br /><br />
-					<hr align="left" width="50%" />
+					<hr align="left" width="100%" />
 					<br />
 					<h4>Mannschaftssportarten</h4>
 					<div class="table">
@@ -1248,7 +1255,7 @@
 						</div>
 					</div>
 					<br /><br />
-					<hr align="left" width="50%" />
+					<hr align="left" width="100%" />
 					<br />
 					<h4>Sportangebote f&uuml;r Kinder</h4>
 					<div class="table">
@@ -1376,7 +1383,7 @@
 						</div>
 					</div>
 					<br /><br />
-					<hr align="left" width="50%" />
+					<hr align="left" width="100%" />
 					<br />
 					<h4>Sportspiele</h4>
 					<div class="table">
@@ -1512,21 +1519,21 @@
 						</div>
 					</div>
 					<br /><br />
-					<hr align="left" width="50%" />
+					<hr align="left" width="100%" />
 					<br />
 					<h3>Wann w&uuml;rdest Du gerne welche Angebote nutzen?</h3>
 					<div class="table">
 				      <div class="spalte4">
 				      	Uhrzeit
 						</div>
-				      <div class="spalte7">
-							<span>&nbsp;&nbsp;&nbsp;&nbsp;Montag&nbsp;&nbsp;&nbsp;</span>
-							<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dienstag&nbsp;&nbsp;&nbsp;</span>
-							<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mittwoch</span>
-							<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Donnerstag</span>
-							<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Freitag</span>
-							<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Samstag</span>
-							<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sonntag</span>
+				      <div class="wochentage spalte7">
+							<div>Montag</div>
+							<div>Dienstag</div>
+							<div>Mittwoch</div>
+							<div>Donnerstag</div>
+							<div>Freitag</div>
+							<div>Samstag</div>
+							<div>Sonntag</div>
 						</div>
 					</div>
 					<div class="table">
@@ -1811,7 +1818,7 @@
 // 																								var_dump($_SERVER);
 
 			//
-			// Daten übernehmen und für Ablage in Datenbank aufbereiten
+			// Daten ï¿½bernehmen und fï¿½r Ablage in Datenbank aufbereiten
 			$mein_alter = NICHT_AUSGEFUELLT;
 			if ( isset ( $_POST['mein_alter'] ) ) {
 				$mein_alter = $_POST['mein_alter'];
@@ -1983,7 +1990,7 @@
 			}
 
 			//
-			// Vereinsgaststätte
+			// Vereinsgaststï¿½tte
 			$guenstige_preise_gast = NICHT_AUSGEFUELLT;
 			if ( isset ( $_POST['guenstige_preise_gast'] ) ) {
 				$guenstige_preise_gast = $_POST['guenstige_preise_gast'];
@@ -2295,7 +2302,7 @@
 			}
 
 			//
-			// Sportangebote für Kinder
+			// Sportangebote fï¿½r Kinder
 			$akrobatik = NICHT_AUSGEFUELLT;
 			if ( isset ( $_POST['akrobatik'] ) ) {
 				$akrobatik = $_POST['akrobatik'];
@@ -2746,7 +2753,7 @@
 			}
 
 			//
-			// Übungsleiter, Trainer oder Betreuer für den FSV 
+			// ï¿½bungsleiter, Trainer oder Betreuer fï¿½r den FSV 
 			$uebungsleiter_betreuer = NICHT_AUSGEFUELLT;
 			if ( isset ( $_POST['uebungsleiter_betreuer'] ) ) {
 				$uebungsleiter_betreuer = ANGEKREUZT;
@@ -2920,7 +2927,7 @@
             	<p><input type = "submit" name = "bestaet_stunden_vorgabe" value = "OK! zur Auswahl der n&auml;chsten Aktivit&auml;t... " /></p>
 		<?php
 			//
-			// Verzweigung zurück
+			// Verzweigung zurï¿½ck
 			$webadr = $_SERVER ['SCRIPT_URI'];
 			header('Content-Type: text/html;charset=utf-8');
 			header("Location: " . $webadr );

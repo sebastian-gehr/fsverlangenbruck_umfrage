@@ -1,6 +1,9 @@
 body {
 	font-family: "Arial",Arial,sans-serif;
-	background-color: #cccccc;
+    background-image: url(http://www.fsverlangenbruck.de/sites/all/themes/zen/fsv/images/background_verlauf.jpg);
+    background-repeat: repeat-x;
+    background-color: #E7F1FB;
+    margin-top: 0;
 }
 
 a {
@@ -49,13 +52,19 @@ hr {
 /* Umfrage FSV Bruck */
 
 .allg_text {
+    margin-left: auto;
+    margin-right: auto;
 	text-align: left;
-/*	left:30%;		*/
-/*	position:relative;		*/
-	padding-left: 20px;
+    width: 1150px;
 	font-family: "Arial",Arial,sans-serif;
 	font-weight: bold;
 	font-size: 10pt;
+    color: #222;
+    background-color: #FFF;
+    padding: 0 20px;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+    border-bottom: 5px solid black;
 }
 
   div.table {
@@ -161,6 +170,16 @@ hr {
     padding: 0px;
   }
 
+    .wochentage {
+        clear: both;
+    }
+
+    .wochentage div {
+        float: left;
+        width: 122px;
+        text-align: center;
+    }
+
  /* eingefügt 08.08.2020 / 16:36 */
 	div.abschlusstext {
 	  font-weight: bold;
@@ -183,11 +202,6 @@ hr {
 .button_Aktionen {background-color: #e7e7e7; color: black;}
 
 /* jquery ui accordion */
-
-div#accordion {
-/*     width: 996px; */
-    width: 1150px;
-  }
 
 .ui-accordion h3.ui-accordion-header {
     font-weight: bold;
