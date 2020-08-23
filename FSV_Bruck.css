@@ -1,0 +1,205 @@
+body {
+	font-family: "Arial",Arial,sans-serif;
+	background-color: #cccccc;
+}
+
+a {
+	padding: 5px;
+	font-family: "Arial",Arial,sans-serif;
+	font-weight: bold;
+	font-size: 10pt;
+	font-style:normal;
+	text-decoration:none;
+	color: blue;
+}
+
+a:link		{ color: blue; }
+a:visited	{ color: red; }
+a:active		{ color: red; }
+
+fieldset {	 /* eingefügt 04.08.2020 / 17:29 */
+	border: none;
+	}
+
+li {
+	background-repeat: no-repeat;
+	background-position: 0 0.2em;
+	padding-left: 1em;
+}
+
+hr {
+	color: black;
+}
+
+.banner {
+  background-color: #cccccc;
+  text-align:center;
+}
+
+.navigation {
+  border:  none;
+  font-family: Arial,Arial,sans-serif;
+  font-weight: bold;
+  font-size: 10pt;
+  background-color: #cccccc;
+  color: #000000;
+  text-align:center;
+}
+
+/* Umfrage FSV Bruck */
+
+.allg_text {
+	text-align: left;
+/*	left:30%;		*/
+/*	position:relative;		*/
+	padding-left: 20px;
+	font-family: "Arial",Arial,sans-serif;
+	font-weight: bold;
+	font-size: 10pt;
+}
+
+  div.table {
+    display: table;
+    width: calc(100% - 10px);
+    border: none;
+    padding:1px;
+  }
+  div.spalte1 {
+    display: table-cell;
+    border: none;
+    width: 300px;
+    padding: 1px;
+  }
+
+  div.spalte2 {
+    display: table-cell;
+    border: none;
+    width: auto;
+    padding: 5px;
+  }
+
+  div.spalte3 {
+    display: table-cell;
+    border: none;
+    width: 180px;
+    padding: 1px;
+  }
+
+  div.spalte4 {
+    display: table-cell;
+    border: none;
+    width: 115px;
+    padding: 0px;
+  }
+
+  div.spalte02 {
+    display: table-cell;
+    border: none;
+    width: auto;
+    padding: 0px;
+  }
+
+  div.spalte5 {
+    display: table-cell;
+    border: none;
+    width: 30px;
+    padding: 0px;
+  }
+
+  div.spalte6 {
+    display: table-cell;
+    border: none;
+    width: 105px;
+    padding: 0px;
+  }
+
+  div.spalte7 {
+    display: table-cell;
+    border: none;
+    width: auto;
+    padding: 0px;
+    align-items: center;
+  }
+
+  div.spaltetop {
+    display: table-cell;
+    border: none;
+    width: 160px;
+	 vertical-align: top;
+    padding: 1px;
+  }
+
+  div.spalte2top {
+    display: table-cell;
+    border: none;
+    width: 95px;
+    vertical-align: top;
+    padding: 5px;
+  }
+
+	div.spalte_l {
+		text-align: left;
+   	display: table-cell;
+    	border: none;
+/* 		width: 190px; */
+		width: 210px;
+   	padding: 0px;
+  }
+
+	div.einrueckspalte {
+		text-align: left;
+   	display: table-cell;
+    	border: none;
+		width: 25px;
+		padding: 0px;
+ }
+
+	div.spalte04 {
+    display: table-cell;
+    border: none;
+    width: 100px;
+    padding: 0px;
+  }
+
+ /* eingefügt 08.08.2020 / 16:36 */
+	div.abschlusstext {
+	  font-weight: bold;
+	  font-size: 13pt;
+	}
+
+.button {
+		border: none;
+/*    width: 32%;		*/
+		width: 22%;
+		height: 25px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 14px;
+		font-weight: bold;
+		padding: 5px;
+		cursor: pointer;
+}
+.button_Aktionen {background-color: #e7e7e7; color: black;}
+
+/* jquery ui accordion */
+
+div#accordion {
+/*     width: 996px; */
+    width: 1150px;
+  }
+
+.ui-accordion h3.ui-accordion-header {
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+span.ui-accordion-header-icon {
+  padding: 0;
+}
+
+div#accordion .ui-accordion-content {
+  height: auto !important;
+}
+
+/* Ende Umfrage FSV Bruck */
