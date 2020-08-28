@@ -64,7 +64,7 @@
 				// Auswahlliste deaktivieren (ausgrauen)
 				document.getElementById('fsv_abteilungen_id').setAttribute('disabled', 'disabled');
 				//
-				// In Auswahlliste mit den FSV-Abteilungen evtl. get�tigte Auswahl zur�cksetzen
+				// In Auswahlliste mit den FSV-Abteilungen evtl. get?tigte Auswahl zur?cksetzen
 				document.frm_fsv_umfrage.fsv_abteilungen.selectedIndex = -1;
 			}
 			
@@ -76,14 +76,12 @@
 			
 			if ( m == 'Mitglied' ) {
 				//
-				// Liste mit Abteilungen  aktivieren
+				// Liste mit Abteilungen aktivieren
 				document.getElementById('fsv_abteilungen_id').removeAttribute('disabled');
 			}
 		}
 
-
 		//****************************************************************************************************//
-
 
 		function checkOptions() {
 			var v = document.frm_fsv_umfrage.uebungsleiter_betreuer.value;
@@ -91,14 +89,10 @@
 // 									alert (v);
 
 			if ( v == 'keine Angebote betreuen' ) {
-				
-// 									alert (document.frm_fsv_umfrage.betreuung_meiner_kinder_waehrend_der_trainingszeit.checked);
 
-// 				document.getElementById('uebungsleiter_ja_id').setAttribute('disabled', 'disabled');
+// 									alert (document.frm_fsv_umfrage.betreuung_meiner_kinder_waehrend_der_trainingszeit.checked);
 // 									alert(document.frm_fsv_umfrage.bezahlte_uebungsleiter_trainerausbildung.checked);
 
-
-				document.frm_fsv_umfrage.stundensatz.value = "";
 				document.frm_fsv_umfrage.bezahlte_uebungsleiter_trainerausbildung.checked = false;
 				document.frm_fsv_umfrage.regelmaessige_fortbildungsmoeglichkeiten.checked = false;
 				document.frm_fsv_umfrage.bezahlte_uebungsleiterstunden.checked = false;
@@ -108,6 +102,7 @@
 				document.frm_fsv_umfrage.betreuung_meiner_kinder_waehrend_der_trainingszeit.checked = false;
 				document.getElementById('weitere_voraussetzungen_fuer_uebungsleiter_id').value = "";
 
+				document.frm_fsv_umfrage.stundensatz.value = "";
 				document.getElementById('stundensatz_id').setAttribute('disabled', 'disabled');
 				document.getElementById('bezahlte_uebungsleiter_trainerausbildung_id').setAttribute('disabled', 'disabled');
 				document.getElementById('regelmaessige_fortbildungsmoeglichkeiten_id').setAttribute('disabled', 'disabled');
@@ -121,9 +116,9 @@
 			else {
 
 // 									alert ("else");
-// 									alert (document.frm_fsv_umfrage.betreuung_meiner_kinder_waehrend_der_trainingszeit.checked);
-				
-				document.getElementById('stundensatz_id').removeAttribute('disabled');
+
+// 				document.getElementById('stundensatz_id').removeAttribute('disabled');
+				document.frm_fsv_umfrage.stundensatz.value = "";
 				document.getElementById('bezahlte_uebungsleiter_trainerausbildung_id').removeAttribute('disabled');
 				document.getElementById('regelmaessige_fortbildungsmoeglichkeiten_id').removeAttribute('disabled');
 				document.getElementById('bezahlte_uebungsleiterstunden_id').removeAttribute('disabled');
@@ -137,9 +132,69 @@
 
 		//****************************************************************************************************//
 
+		function uebungsleiterstundensatz() {
+			
+// 								alert ("uebungsleiterstundensatz");
+// 								alert (document.frm_fsv_umfrage.bezahlte_uebungsleiterstunden.checked);
+
+			if ( document.frm_fsv_umfrage.bezahlte_uebungsleiterstunden.checked == false ) {
+				document.frm_fsv_umfrage.stundensatz.value = "";
+				document.getElementById('stundensatz_id').setAttribute('disabled', 'disabled');
+			}
+			else {
+				document.getElementById('stundensatz_id').removeAttribute('disabled');
+			}
+		}
+
+		//****************************************************************************************************//
+
+		function checkStdSatzNumber() {
+			
+// 									alert ("checkStdSatzNumber aufgerufen");
+// 									alert (document.frm_fsv_umfrage.stundensatz.value);
+
+			if (		( document.frm_fsv_umfrage.stundensatz.value != "" ) 
+					&& ( (isNaN (document.frm_fsv_umfrage.stundensatz.value ) ) ) ) {
+						
+// 									alert ("checkStdSatzNumber: NaN!");
+						
+				document.frm_fsv_umfrage.stundensatz.value = "";
+			}
+		}
+
+		//****************************************************************************************************//
+
+		function setOptionsInactive() {
+			
+// 			document.getElementById('fsv_abteilungen_id').setAttribute('disabled', 'disabled');
+			document.getElementById('austrittsgrund_id').setAttribute('disabled', 'disabled');
+			document.frm_fsv_umfrage.stundensatz.value = "";
+
+			document.frm_fsv_umfrage.bezahlte_uebungsleiter_trainerausbildung.checked = false;
+			document.frm_fsv_umfrage.regelmaessige_fortbildungsmoeglichkeiten.checked = false;
+			document.frm_fsv_umfrage.bezahlte_uebungsleiterstunden.checked = false;
+			document.frm_fsv_umfrage.kostenfreie_vereinsmitgliedschaft.checked = false;
+			document.frm_fsv_umfrage.begleitete_einarbeitungszeit.checked = false;
+			document.frm_fsv_umfrage.verlaessliche_vertretungsregelung.checked = false;
+			document.frm_fsv_umfrage.betreuung_meiner_kinder_waehrend_der_trainingszeit.checked = false;
+			document.getElementById('weitere_voraussetzungen_fuer_uebungsleiter_id').value = "";
+
+			document.getElementById('stundensatz_id').setAttribute('disabled', 'disabled');
+			document.getElementById('bezahlte_uebungsleiter_trainerausbildung_id').setAttribute('disabled', 'disabled');
+			document.getElementById('regelmaessige_fortbildungsmoeglichkeiten_id').setAttribute('disabled', 'disabled');
+			document.getElementById('bezahlte_uebungsleiterstunden_id').setAttribute('disabled', 'disabled');
+			document.getElementById('kostenfreie_vereinsmitgliedschaft_id').setAttribute('disabled', 'disabled');
+			document.getElementById('begleitete_einarbeitungszeit_id').setAttribute('disabled', 'disabled');
+			document.getElementById('verlaessliche_vertretungsregelung_id').setAttribute('disabled', 'disabled');
+			document.getElementById('betreuung_meiner_kinder_waehrend_der_trainingszeit_id').setAttribute('disabled', 'disabled');
+			document.getElementById('weitere_voraussetzungen_fuer_uebungsleiter_id').setAttribute('disabled', 'disabled');
+		}
+
+		//****************************************************************************************************//
+
 	</script>
 </head>
-<body>
+<body onload="setOptionsInactive();">
 	<noscript>
 		Sie m&uuml;ssen JavaScript aktivieren!
 	</noscript>
@@ -177,8 +232,8 @@
 		if (				( isset ( $_POST ) )
 				&&   ( ! ( isset ( $_POST['fragebogen_abschicken'] ) ) ) )  {
 			//
-			// komme von der Hauptseite her (Ansto� der Umfrage)
-			// Aufblenden des Formulars f�r die Abfrage bzw. Return
+			// komme von der Hauptseite her (Ansto? der Umfrage)
+			// Aufblenden des Formulars f?r die Abfrage bzw. Return
 
 // 																								echo "<br />" . __LINE__  . "<br />";
 // 																								var_dump($_POST);
@@ -1715,7 +1770,7 @@
 				      <div class="spalte_3pos">
 							<input type="checkbox" name = "bezahlte_uebungsleiterstunden" id = "bezahlte_uebungsleiterstunden_id" 
 										value = "Bezahlte Uebungsleiterstunden" onClick = "uebungsleiterstundensatz()" />Bezahlte &Uuml;bungsleiterstunden&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-							<input type="text" name = "stundensatz" id  = "stundensatz_id" size = "5" maxlength = "3" value = ""/>&nbsp;Euro / 60 min
+							<input type = "text" name = "stundensatz" id  = "stundensatz_id" size = "5" maxlength = "3" value = "" onBlur = "checkStdSatzNumber()" = />&nbsp;Euro / 60 min
 						</div>
 					</div>
 					</p>
@@ -1818,7 +1873,7 @@
 // 																								var_dump($_SERVER);
 
 			//
-			// Daten �bernehmen und f�r Ablage in Datenbank aufbereiten
+			// Daten ?bernehmen und f?r Ablage in Datenbank aufbereiten
 			$mein_alter = NICHT_AUSGEFUELLT;
 			if ( isset ( $_POST['mein_alter'] ) ) {
 				$mein_alter = $_POST['mein_alter'];
@@ -1990,7 +2045,7 @@
 			}
 
 			//
-			// Vereinsgastst�tte
+			// Vereinsgastst?tte
 			$guenstige_preise_gast = NICHT_AUSGEFUELLT;
 			if ( isset ( $_POST['guenstige_preise_gast'] ) ) {
 				$guenstige_preise_gast = $_POST['guenstige_preise_gast'];
@@ -2302,7 +2357,7 @@
 			}
 
 			//
-			// Sportangebote f�r Kinder
+			// Sportangebote f?r Kinder
 			$akrobatik = NICHT_AUSGEFUELLT;
 			if ( isset ( $_POST['akrobatik'] ) ) {
 				$akrobatik = $_POST['akrobatik'];
@@ -2753,7 +2808,7 @@
 			}
 
 			//
-			// �bungsleiter, Trainer oder Betreuer f�r den FSV 
+			// ?bungsleiter, Trainer oder Betreuer f?r den FSV 
 			$uebungsleiter_betreuer = NICHT_AUSGEFUELLT;
 			if ( isset ( $_POST['uebungsleiter_betreuer'] ) ) {
 				$uebungsleiter_betreuer = ANGEKREUZT;
@@ -2780,6 +2835,7 @@
 				$regelmaessige_fortbildungsmoeglichkeiten = ANGEKREUZT;
 			}
 
+			$stundensatz = "";
 			$bezahlte_uebungsleiterstunden = NICHT_AUSGEFUELLT;
 			if ( isset ( $_POST['bezahlte_uebungsleiterstunden'] ) ) {
 				$bezahlte_uebungsleiterstunden = ANGEKREUZT;
@@ -2927,7 +2983,7 @@
             	<p><input type = "submit" name = "bestaet_stunden_vorgabe" value = "OK! zur Auswahl der n&auml;chsten Aktivit&auml;t... " /></p>
 		<?php
 			//
-			// Verzweigung zur�ck
+			// Verzweigung zur?ck
 			$webadr = $_SERVER ['SCRIPT_URI'];
 			header('Content-Type: text/html;charset=utf-8');
 			header("Location: " . $webadr );
