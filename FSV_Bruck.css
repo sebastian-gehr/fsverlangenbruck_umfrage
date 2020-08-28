@@ -176,8 +176,12 @@ hr {
 
     .wochentage div {
         float: left;
-        width: 122px;
+        width: 131px;
         text-align: center;
+    }
+
+    .spalte-eingabe input {
+        width: 120px;
     }
 
  /* eingefügt 08.08.2020 / 16:36 */

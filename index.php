@@ -2,14 +2,14 @@
 	session_start();
 	if ( 		isset ( $_SESSION['LAST_ACTIVITY'] )
 			&& (time() - $_SESSION['LAST_ACTIVITY'] > 1800)) {
-		$webadr = $_SERVER ['SCRIPT_URI'];
+		$webadr = $_SERVER['SCRIPT_URI'];
 		header('Content-Type: text/html;charset=utf-8');
 		header("Location: " . $webadr );
 	}
 	$_SESSION['LAST_ACTIVITY'] = time();
 
 	if ( ! (isset ( $_SESSION ) ) ) {
-		$webadr = $_SERVER ['SCRIPT_URI'];
+		$webadr = $_SERVER['SCRIPT_URI'];
 		header('Content-Type: text/html;charset=utf-8');
 		header("Location: " . $webadr );
 	}
@@ -1595,7 +1595,7 @@
 				      <div class="spalte4">
 				      	05:00 - 07:00 Uhr
 						</div>
-				      <div class="spalte02">
+				      <div class="spalte02 spalte-eingabe">
 							<input name="mo_05_07" type="text" size="15" maxlength="15" value = "" />
 							<input name="di_05_07" type="text" size="15" maxlength="15" value = "" />
 							<input name="mi_05_07" type="text" size="15" maxlength="15" value = "" />
@@ -1609,7 +1609,7 @@
 				      <div class="spalte4">
 				      	07:00 - 09:00 Uhr
 						</div>
-				      <div class="spalte02">
+				      <div class="spalte02 spalte-eingabe">
 							<input name="mo_07_09" type="text" size="15" maxlength="15" value = "" />
 							<input name="di_07_09" type="text" size="15" maxlength="15" value = "" />
 							<input name="mi_07_09" type="text" size="15" maxlength="15" value = "" />
@@ -1623,7 +1623,7 @@
 				      <div class="spalte4">
 				      	09:00 - 11:00 Uhr
 						</div>
-				      <div class="spalte02">
+				      <div class="spalte02 spalte-eingabe">
 							<input name="mo_09_11" type="text" size="15" maxlength="15" value = "" />
 							<input name="di_09_11" type="text" size="15" maxlength="15" value = "" />
 							<input name="mi_09_11" type="text" size="15" maxlength="15" value = "" />
@@ -1637,7 +1637,7 @@
 				      <div class="spalte4">
 				      	11:00 - 13:00 Uhr
 						</div>
-				      <div class="spalte02">
+				      <div class="spalte02 spalte-eingabe">
 							<input name="mo_11_13" type="text" size="15" maxlength="15" value = "" />
 							<input name="di_11_13" type="text" size="15" maxlength="15" value = "" />
 							<input name="mi_11_13" type="text" size="15" maxlength="15" value = "" />
@@ -1651,7 +1651,7 @@
 				      <div class="spalte4">
 				      	13:00 - 15:00 Uhr
 						</div>
-				      <div class="spalte02">
+				      <div class="spalte02 spalte-eingabe">
 							<input name="mo_13_15" type="text" size="15" maxlength="15" value = "" />
 							<input name="di_13_15" type="text" size="15" maxlength="15" value = "" />
 							<input name="mi_13_15" type="text" size="15" maxlength="15" value = "" />
@@ -1665,7 +1665,7 @@
 				      <div class="spalte4">
 				      	15:00 - 17:00 Uhr
 						</div>
-				      <div class="spalte02">
+				      <div class="spalte02 spalte-eingabe">
 							<input name="mo_15_17" type="text" size="15" maxlength="15" value = "" />
 							<input name="di_15_17" type="text" size="15" maxlength="15" value = "" />
 							<input name="mi_15_17" type="text" size="15" maxlength="15" value = "" />
@@ -1679,7 +1679,7 @@
 				      <div class="spalte4">
 				      	17:00 - 19:00 Uhr
 						</div>
-				      <div class="spalte02">
+				      <div class="spalte02 spalte-eingabe">
 							<input name="mo_17_19" type="text" size="15" maxlength="15" value = "" />
 							<input name="di_17_19" type="text" size="15" maxlength="15" value = "" />
 							<input name="mi_17_19" type="text" size="15" maxlength="15" value = "" />
@@ -1693,7 +1693,7 @@
 				      <div class="spalte4">
 				      	19:00 - 21:00 Uhr
 						</div>
-				      <div class="spalte02">
+				      <div class="spalte02 spalte-eingabe">
 							<input name="mo_19_21" type="text" size="15" maxlength="15" value = "" />
 							<input name="di_19_21" type="text" size="15" maxlength="15" value = "" />
 							<input name="mi_19_21" type="text" size="15" maxlength="15" value = "" />
@@ -1707,7 +1707,7 @@
 				      <div class="spalte4">
 				      	21:00 - 23:00 Uhr
 						</div>
-				      <div class="spalte02">
+				      <div class="spalte02 spalte-eingabe">
 							<input name="mo_21_23" type="text" size="15" maxlength="15" value = "" />
 							<input name="di_21_23" type="text" size="15" maxlength="15" value = "" />
 							<input name="mi_21_23" type="text" size="15" maxlength="15" value = "" />
@@ -1721,7 +1721,7 @@
 				      <div class="spalte4">
 				      	23:00 - 01:00 Uhr
 						</div>
-				      <div class="spalte02">
+				      <div class="spalte02 spalte-eingabe">
 							<input name="mo_23_01" type="text" size="15" maxlength="15" value = "" />
 							<input name="di_23_01" type="text" size="15" maxlength="15" value = "" />
 							<input name="mi_23_01" type="text" size="15" maxlength="15" value = "" />
